@@ -8,33 +8,98 @@
     <meta name="description" content="Une page d'un site web en utilisant un fichier CSS pour l'optimisation du mobile first">
     <link rel="stylesheet" href="asset/css/w3css.css">
     <link rel="stylesheet" href="asset/css/font-awesome.css">
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        main, section {
+            margin-top : 150px;
+        }
+        section {
+            scroll-margin-top : 50px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <header>
-        <nav>
+    <header class = "w3-top w3-white">
+        <nav id ="desktopNav" class ="w3-bar">
+            <a href="javascript:void(0)" onclick="toogleNavbar()" class="w3-button w3-hide-large w3-hide-medium w3-right">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="w3-bar-item w3-button">
+                Home
+            </a> 
+            <a href="#about" class="w3-bar-item w3-button w3-hide-small">
+                About
+            </a>
+            <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small">
+                Portfolio
+            </a>
+            <a href="#contact" class="w3-bar-item w3-button w3-hide-small">
+                Contact
+            </a>       
+            </nav>
 
+        <nav id="mobileNav" class = "w3-bar-block w3-white w3-hide-large w3-hide-medium w3-hide">      
+            <a href="#about" onclick="toogleNavbar()" class ="w3-bar-item w3-button">About</a>
+            <a href="#portfolio" onclick="toogleNavbar()" class ="w3-bar-item w3-button">Portfolio</a>
+            <a href="#contact" onclick="toogleNavbar()" class ="w3-bar-item w3-button">Contact</a>
         </nav>
     </header>
 
     <main>
-        <section>
-            
-        <section>
-            <article>
-
-            </article>
+        <section id="home"></section>
+        <section id="about">
+            <h2>
+                About
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
+            </p>
         </section>
 
-        <section>
+        <section id="portfolio">
+            <h2>
+                Portfolio
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur ad-ipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
+            </p>
+        </section>
 
+        <section id="contact">
+            <h2>
+                Contact
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
+            </p>
         </section>
     </main>
 
     <footer>
 
     </footer>
+    
+    <script>
+        function toogleNavbar()
+        {
+            var nav = document.getElementById("mobileNav");
+            nav.classList.toggle("w3-show");
+            console.log(nav.classList); 
+        }
+    </script>
 
 </body>
 
