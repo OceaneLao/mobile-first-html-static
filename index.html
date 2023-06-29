@@ -13,7 +13,7 @@
             scroll-behavior: smooth;
         }
         main, section {
-            margin-top : 150px;
+            margin-top : 50px;
         }
         section {
             scroll-margin-top : 50px;
@@ -23,12 +23,13 @@
 
 <body>
 
+    <!--DEBUT DE MON HEADER-->
     <header class = "w3-top w3-white">
-        <nav id ="desktopNav" class ="w3-bar">
+        <nav id ="desktopNav" class ="w3-bar w3-border-bottom">
             <a href="javascript:void(0)" onclick="toogleNavbar()" class="w3-button w3-hide-large w3-hide-medium w3-right">
                 <i class="fa fa-bars"></i>
             </a>
-            <a href="#home" class="w3-bar-item w3-button">
+            <a href="#home" onclick ="homeHideNavbar()" class="w3-bar-item w3-button">
                 Home
             </a> 
             <a href="#about" class="w3-bar-item w3-button w3-hide-small">
@@ -48,25 +49,46 @@
             <a href="#contact" onclick="toogleNavbar()" class ="w3-bar-item w3-button">Contact</a>
         </nav>
     </header>
+    <!--FIN DE MON HEADER-->
 
+    <!--DEBUT DE MON MAIN-->
     <main>
         <section id="home"></section>
         <section id="about">
             <h2>
                 About
             </h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
-            </p>
+            <div class ="w3-row-padding">
+                <div class ="w3-half">
+                    <img src="https://c0.lestechnophiles.com/www.numerama.com/wp-content/uploads/2015/09/codesourcelignes.jpg?avif=1&key=716530b2" alt="" class ="w3-image">
+                </div>
+                <div class ="w3-half">
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
+                    </p>
+                </div>
+            </div>
         </section>
 
+    <!--PARTIE PORTFOLIO-->
         <section id="portfolio">
             <h2>
                 Portfolio
             </h2>
+
+            <div class="w3-row-padding">
+                <article class="w3-col m4 s4 l4 w3-center">
+                    <img src="/asset/img/code.jpeg" alt="" class ="w3-image">
+                </article>
+                <article class="w3-col m4 s4 l4 w3-center">
+                    <img src="/asset/img/code02.jpeg" alt="" class ="w3-image">
+                </article>
+                <article class="w3-col m4 s4 l4 w3-center">
+                    <img src="/asset/img/code03.jpeg" alt="" class ="w3-image">
+                </article>
+            </div>
+           
             <p>
                 Lorem ipsum dolor sit amet consectetur ad-ipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
@@ -87,17 +109,29 @@
             </p>
         </section>
     </main>
+    <!--FIN DE MON MAIN-->
 
+    <!--DEBUT DE MON FOOTER-->
     <footer>
 
     </footer>
-    
+    <!--FIN DE MON FOOTER-->
+
     <script>
         function toogleNavbar()
         {
             var nav = document.getElementById("mobileNav");
             nav.classList.toggle("w3-show");
             console.log(nav.classList); 
+        }
+
+        /*cacher la barre de navigation*/
+        function homeHideNavbar()
+        {
+            var nav = document.getElementById("mobileNav");
+            if (nav.classList.contains("w3-show")){
+                nav.classList.remove("w3-show");
+            }
         }
     </script>
 
