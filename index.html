@@ -37,6 +37,11 @@
             background-position: center;
         }
 
+        label, input, textarea {
+            display : block;
+            text-align: left;
+        }
+
     </style>
 </head>
 
@@ -49,23 +54,35 @@
                 <i class="fa fa-bars"></i>
             </a>
             <a href="#home" onclick ="homeHideNavbar()" class="w3-bar-item w3-button">
-                Home
+                <img src="asset/img/753945_games_game_gaming_play_video_icon.svg" alt="Gaming Logo" style = "width:50px">
             </a> 
             <a href="#about" class="w3-bar-item w3-button w3-hide-small">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
                 About
             </a>
             <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small">
+                <i class="fa fa-picture-o" aria-hidden="true"></i>
                 Portfolio
             </a>
             <a href="#contact" class="w3-bar-item w3-button w3-hide-small">
+                <i class="fa fa-comment" aria-hidden="true"></i>
                 Contact
             </a>       
             </nav>
 
         <nav id="mobileNav" class = "w3-bar-block w3-white w3-hide-large w3-hide-medium w3-hide">      
-            <a href="#about" onclick="toogleNavbar()" class ="w3-bar-item w3-button">About</a>
-            <a href="#portfolio" onclick="toogleNavbar()" class ="w3-bar-item w3-button">Portfolio</a>
-            <a href="#contact" onclick="toogleNavbar()" class ="w3-bar-item w3-button">Contact</a>
+            <a href="#about" onclick="toogleNavbar()" class ="w3-bar-item w3-button">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                About
+            </a>
+            <a href="#portfolio" onclick="toogleNavbar()" class ="w3-bar-item w3-button">
+                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                Portfolio
+            </a>
+            <a href="#contact" onclick="toogleNavbar()" class ="w3-bar-item w3-button">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                Contact
+            </a>
         </nav>
     </header>
     <!--FIN DE MON HEADER-->
@@ -77,6 +94,7 @@
                 MY SUPER MOBILE WEBSITE
             </h1>
         </section>
+
         <section id="about">
             <h2>
                 About
@@ -120,32 +138,39 @@
                     <img src="/asset/img/code03.jpeg" alt="" class ="w3-image">
                 </article>
             </div>
-           
-            <p>
-                Lorem ipsum dolor sit amet consectetur ad-ipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
-            </p>
         </section>
 
         <section id="contact">
             <h2>
                 Contact
             </h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
-            </p>
+            
+            <form action="" class ="w3-center w3-margin">
+                <label for="email">
+                    Email
+                </label>
+                <input type="email" placeholder ="Entrez votre e-mail" class="w3-input w3-border w3-margin-bottom">
+                <label for="message">
+                    Entrez votre message
+                </label>
+                <textarea name="" id="" cols="30" rows="5" placeholder ="Votre message..." class="w3-input w3-border w3-margin-bottom"></textarea>
+                <div class = "w3-container">
+                    <button onclick ="document.getElementById('id01').style.display='block'" class="w3-button w3-border">
+                    Envoyez
+                    </button>
+                    </div>
+                </div>
+            </form>
+
         </section>
     </main>
     <!--FIN DE MON MAIN-->
 
     <!--DEBUT DE MON FOOTER-->
-    <footer>
-
+    <footer class="w3-gray w3-padding">
+        <p class ="w3-center w3-text-white">
+            Exercice Mobile First Static
+        </p>    
     </footer>
     <!--FIN DE MON FOOTER-->
 
