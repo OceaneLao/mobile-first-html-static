@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="asset/css/w3css.css">
     <link rel="stylesheet" href="asset/css/font-awesome.css">
     <link rel="icon" href="asset/img/753945_games_game_gaming_play_video_icon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Merienda:wght@300&family=Open+Sans&display=swap" rel="stylesheet">
+    
     <style>
         html{
             scroll-behavior: smooth;
@@ -43,6 +47,14 @@
             text-align: left;
         }
 
+        h1, h2 {
+            font-family: 'Bacasime Antique', serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
     </style>
 </head>
 
@@ -51,7 +63,7 @@
     <!--DEBUT DE MON HEADER-->
     <header class = "w3-top w3-white">
         <nav id ="desktopNav" class ="w3-bar w3-border-bottom">
-            <a href="javascript:void(0)" onclick="toogleNavbar()" class="w3-button w3-hide-large w3-hide-medium w3-right">
+            <a href="javascript:void(0)" onclick="toogleNavbar()" class="w3-button w3-hide-large w3-hide-medium wn-left">
                 <i class="fa fa-bars"></i>
             </a>
             <a href="#home" onclick ="homeHideNavbar()" class="w3-bar-item w3-button">
@@ -104,11 +116,14 @@
                 <div class ="w3-half">
                     <img src="https://c0.lestechnophiles.com/www.numerama.com/wp-content/uploads/2015/09/codesourcelignes.jpg?avif=1&key=716530b2" alt="" class ="w3-image">
                 </div>
-                <div class ="w3-half">
+                <div class ="w3-half w3-center w3-padding">
                     <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
                     </p>
+                    <button class="w3-border w3-panel w3-round-xlarge w3-padding">
+                        En savoir plus
+                    </button>
                 </div>
             </div>
         </section>
@@ -168,8 +183,28 @@
     <!--FIN DE MON MAIN-->
 
     <!--DEBUT DE MON FOOTER-->
-    <footer class="w3-gray w3-padding">
-        <p class ="w3-center w3-text-white">
+    <footer class="w3-gray w3-padding w3-center w3-text-white">
+        <a href="">
+            <i class="fa fa-facebook-official fa-2x w3-margin-left" aria-hidden="true"></i>
+        </a>
+
+        <a href="">
+            <i class="fa fa-instagram fa-2x w3-margin-left" aria-hidden="true"></i>
+        </a>
+
+        <a href="">
+            <i class="fa fa-twitter-square fa-2x w3-margin-left" aria-hidden="true"></i>
+        </a>
+        
+        <a href="">
+            <i class="fa fa-youtube-play fa-2x w3-margin-left" aria-hidden="true"></i>
+        </a>
+        
+        <a href="" class="w3-none">
+            <i class="fa fa-google-plus fa-2x w3-margin-left" aria-hidden="true"></i>
+        </a>
+
+        <p>
             Exercice Mobile First Static
         </p>    
     </footer>
