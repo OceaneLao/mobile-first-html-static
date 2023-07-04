@@ -8,24 +8,29 @@
     <meta name="description" content="Une page d'un site web en utilisant un fichier CSS pour l'optimisation du mobile first">
     <link rel="stylesheet" href="asset/css/w3css.css">
     <link rel="stylesheet" href="asset/css/font-awesome.css">
-    <link rel="icon" href="asset/img/753945_games_game_gaming_play_video_icon.svg" type="image/svg+xml">
+    <link rel="icon" href="asset/img/9023739_magic_wand_fill_icon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Merienda:wght@300&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Merienda:wght@300&family=Open+Sans&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
     
     <style>
         html{
             scroll-behavior: smooth;
         }
+
         main, section {
-            margin-top : 50px;
+            margin-top : 20px;
         }
         section {
             scroll-margin-top : 50px;
         }
 
         #home {
-            height : 300px;
+            height : 700px;
             background-image: url("./asset/img/bckground.jpg");
             background-size: cover;
             background-repeat: no-repeat;
@@ -33,7 +38,7 @@
             background-attachment: fixed;
         }
 
-        section h2 {
+        section h2, footer {
             text-align: center;
             font-weight: bold;
             background-image: url("./asset/img/bckground.jpg");
@@ -47,12 +52,38 @@
             text-align: left;
         }
 
-        h1, h2 {
+        h1, h3, button {
             font-family: 'Bacasime Antique', serif;
+            font-weight: bold;
+        }
+
+        p, button {
+            font-family: 'Bacasime Antique', serif;
+            font-size: medium;
+        }
+
+        h2 {
+            font-family: 'Satisfy', cursive;
+
         }
 
         a {
             text-decoration: none;
+        }
+
+        #toTop {
+            position:fixed;
+            bottom:15px;
+            right:15px;
+            cursor:pointer;
+            background: rgba(000,000,000,0.7);
+            width:50px;
+            font-size:25px;
+            line-height:45px;
+            color:#fff;
+            text-align:center;
+            border-radius:50px;
+            height:50px;
         }
 
     </style>
@@ -62,20 +93,20 @@
 
     <!--DEBUT DE MON HEADER-->
     <header class = "w3-top w3-white">
-        <nav id ="desktopNav" class ="w3-bar w3-border-bottom">
-            <a href="javascript:void(0)" onclick="toogleNavbar()" class="w3-button w3-hide-large w3-hide-medium wn-left">
-                <i class="fa fa-bars"></i>
+        <nav id ="desktopNav" class ="w3-bar">
+            <a href="javascript:void(0)" onclick="toogleNavbar()" class="w3-button w3-hide-large w3-hide-medium w3-right">
+                <i class="fa fa-bars fa-2x"></i>
             </a>
-            <a href="#home" onclick ="homeHideNavbar()" class="w3-bar-item w3-button">
-                <img src="asset/img/753945_games_game_gaming_play_video_icon.svg" alt="Gaming Logo" style = "width:50px">
+            <a href="#home" onclick ="homeHideNavbar()" class="w3-bar-item w3-button w3-right-align">
+                <img src="asset/img/9023739_magic_wand_fill_icon.svg" alt="Magic" style = "width:35px">
             </a> 
             <a href="#about" class="w3-bar-item w3-button w3-hide-small">
                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                 About
             </a>
-            <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small">
+            <a href="#services" class="w3-bar-item w3-button w3-hide-small">
                 <i class="fa fa-picture-o" aria-hidden="true"></i>
-                Portfolio
+                services
             </a>
             <a href="#contact" class="w3-bar-item w3-button w3-hide-small">
                 <i class="fa fa-comment" aria-hidden="true"></i>
@@ -84,95 +115,120 @@
             </nav>
 
         <nav id="mobileNav" class = "w3-bar-block w3-white w3-hide-large w3-hide-medium w3-hide">      
-            <a href="#about" onclick="toogleNavbar()" class ="w3-bar-item w3-button">
-                <i class="fa fa-info-circle" aria-hidden="true"></i>
+            <a href="#about" onclick="toogleNavbar()" class ="w3-bar-item w3-button w3-right-align">
                 About
+                <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
             </a>
-            <a href="#portfolio" onclick="toogleNavbar()" class ="w3-bar-item w3-button">
-                <i class="fa fa-picture-o" aria-hidden="true"></i>
-                Portfolio
+            <a href="#services" onclick="toogleNavbar()" class ="w3-bar-item w3-button w3-right-align">
+                Services
+                <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
             </a>
-            <a href="#contact" onclick="toogleNavbar()" class ="w3-bar-item w3-button">
-                <i class="fa fa-comment" aria-hidden="true"></i>
+            <a href="#contact" onclick="toogleNavbar()" class ="w3-bar-item w3-button w3-right-align">
                 Contact
+                <i class="fa fa-comment fa-2x" aria-hidden="true"></i>
             </a>
         </nav>
     </header>
     <!--FIN DE MON HEADER-->
 
     <!--DEBUT DE MON MAIN-->
-    <main class="w3-container">
-        <section id="home" class="w3-display-container">
-            <h1 class ="w3-display-middle w3-black w3-center">
-                MY SUPER MOBILE WEBSITE
+  
+        <section id="home">
+            <h1 class ="w3-display-middle w3-black w3-center w3-animate-fading">
+                MY SUPER MAGIC MOBILE WEBSITE
             </h1>
         </section>
 
+    <main class="w3-container">
         <section id="about">
-            <h2>
-                About
+            <h2 class="w3-panel w3-round-xxlarge">
+                About the magic shop
             </h2>
             <div class ="w3-row-padding">
                 <div class ="w3-half">
-                    <img src="https://c0.lestechnophiles.com/www.numerama.com/wp-content/uploads/2015/09/codesourcelignes.jpg?avif=1&key=716530b2" alt="" class ="w3-image">
+                    <img src="./asset/img/the_magic_shop.jpg" alt="Magic Shop" class ="w3-image">
                 </div>
                 <div class ="w3-half w3-center w3-padding">
                     <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rem laborum perferendis odit beatae sed alias cumque aperiam quo placeat eum reiciendis aliquam officia, error asperiores nam exercitationem neque dicta.
                     </p>
-                    <button class="w3-border w3-panel w3-round-xlarge w3-padding">
-                        En savoir plus
+                    <button class="w3-border w3-panel w3-round-xxlarge w3-padding w3-black" style="width:50%">
+                        Read more
                     </button>
                 </div>
             </div>
         </section>
 
-    <!--PARTIE PORTFOLIO-->
-        <section id="portfolio">
+    <!--PARTIE SERVICES-->
+        <section id="services">
             <h2>
-                Portfolio
+                Our services
             </h2>
 
             <div class="w3-row-padding">
                 <article class="w3-col m4 w3-center">
                     <h3>
-                        Développeur web
+                        <img src="./asset/img/9310127_star_sparkle_stars_sparkles_icon.svg" alt="Sparkles" style ="width:5%">
+                            Potions
+                        <img src="./asset/img/9310127_star_sparkle_stars_sparkles_icon.svg" alt="Sparkles" style ="width:5%">
                     </h3>
-                    <img src="./asset/img/code.jpeg" alt="" class ="w3-image">
+                    <img src="./asset/img/potions.jpg" alt="" class ="w3-image">
+                    <p>
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt esse doloremque inventore sed dolor officia doloribus officiis ipsa? 
+                    </p>
+                    <button class="w3-border w3-panel w3-round-xxlarge w3-padding w3-black" style="width:50%">
+                        Read more
+                    </button>
                 </article>
                 <article class="w3-col m4 w3-center">
                     <h3>
-                        Design UI/UX
+                        <img src="./asset/img/9310127_star_sparkle_stars_sparkles_icon.svg" alt="Sparkles" style ="width:5%">
+                            Grimoire
+                        <img src="./asset/img/9310127_star_sparkle_stars_sparkles_icon.svg" alt="Sparkles" style ="width:5%">
                     </h3>
-                    <img src="./asset/img/code02.jpeg" alt="" class ="w3-image">
+                    <img src="./asset/img/grimoire.jpg" alt="" class ="w3-image">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt esse doloremque inventore sed dolor officia doloribus officiis ipsa? 
+                     </p>
+                     <button class="w3-border w3-panel w3-round-xxlarge w3-padding w3-black" style="width:50%">
+                        Read more
+                    </button>
                 </article>
                 <article class="w3-col m4 w3-center">
                     <h3>
-                       Marketing digital
+                        <img src="./asset/img/9310127_star_sparkle_stars_sparkles_icon.svg" alt="Sparkles" style ="width:5%">
+                            Wizard training
+                       <img src="./asset/img/9310127_star_sparkle_stars_sparkles_icon.svg" alt="Sparkles" style ="width:5%">
                     </h3>
-                    <img src="./asset/img/code03.jpeg" alt="" class ="w3-image">
+                    <img src="./asset/img/wizard_training.jpg" alt="" class ="w3-image">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt esse doloremque inventore sed dolor officia doloribus officiis ipsa? 
+                     </p>
+                     <button class="w3-border w3-panel w3-round-xxlarge w3-padding w3-black" style="width:50%">
+                        Read more
+                    </button>
                 </article>
             </div>
         </section>
 
         <section id="contact">
             <h2>
-                Contact
+                Contact us
             </h2>
             
             <form action="" class ="w3-center w3-margin">
                 <label for="email">
                     Email
                 </label>
-                <input type="email" placeholder ="Entrez votre e-mail" class="w3-input w3-border w3-margin-bottom">
+                <input type="email" placeholder ="Enter your e-mail" class="w3-input w3-border w3-margin-bottom w3-border w3-round-large">
                 <label for="message">
-                    Entrez votre message
+                    Your message
                 </label>
-                <textarea name="" id="" cols="30" rows="5" placeholder ="Votre message..." class="w3-input w3-border w3-margin-bottom"></textarea>
+                <textarea name="" id="" cols="30" rows="5" placeholder ="Your message..." class="w3-input w3-border w3-margin-bottom w3-round-large"></textarea>
                 <div class = "w3-container">
-                    <button onclick ="document.getElementById('id01').style.display='block'" class="w3-button w3-border">
-                    Envoyez
+                    <button class="w3-border w3-panel w3-round-xxlarge w3-padding w3-black" style="width:50%">
+                    Send
                     </button>
                     </div>
                 </div>
@@ -183,7 +239,7 @@
     <!--FIN DE MON MAIN-->
 
     <!--DEBUT DE MON FOOTER-->
-    <footer class="w3-gray w3-padding w3-center w3-text-white">
+    <footer class="w3-padding w3-center">
         <a href="">
             <i class="fa fa-facebook-official fa-2x w3-margin-left" aria-hidden="true"></i>
         </a>
@@ -226,8 +282,17 @@
                 nav.classList.remove("w3-show");
             }
         }
+
+        /*Foncitonnalité flèche vers le haut et apparition lors du scroll */
+        $(function(){$.fn.scrollToTop=function(){$(this).hide().removeAttr("href");if($(window).scrollTop()!="0"){$(this).fadeIn("slow")}var scrollDiv=$(this);$(window).scroll(function(){if($(window).scrollTop()=="0"){$(scrollDiv).fadeOut("slow")}else{$(scrollDiv).fadeIn("slow")}});$(this).click(function(){$("html, body").animate({scrollTop:0},"slow")})}}); 
+        $(function(){
+        $("#toTop").scrollToTop();
+        });
     </script>
 
+        <!-- DEBUT DE L'ICONE FLECHE VERS LE HAUT-->
+            <div id="toTop"><i class="fa fa-arrow-up"></i></div>
+        <!--FIN DE L'ICONE FLECHE VERS LE HAUT-->
 </body>
 
 </html>
